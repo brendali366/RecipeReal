@@ -54,6 +54,8 @@ gem "nokogiri", '>= 1.11.7'
 
 
 group :development, :test do
+    gem "sqlite3", "~> 1.4"
+
   # Use sqlite3 as the database for Active Record
 end
 group :production do 
