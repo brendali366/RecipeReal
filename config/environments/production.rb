@@ -5,7 +5,10 @@ Rails.application.configure do
 
   # Code is not reloaded between requests.
   config.cache_classes = true
-
+  config.serve_static_assets = true
+config.assets.compile = true
+config.assets.digest = true
+config.secret_key_base = '8332873cf5032b4d48df004bfc0b658767f2e2654aab3d24e4e657b04b4d668f343fd7dbc110300654e7b1bd26f935e18283d79d87de4a3979f1cc68bb195031'
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
@@ -28,7 +31,6 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = "http://assets.example.com"

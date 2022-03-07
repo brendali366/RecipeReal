@@ -47,7 +47,8 @@ gem 'bootstrap', '~> 4.6.1'
 gem 'cocoon'
 gem "carrierwave"
 gem 'devise'
-
+gem 'fog-aws'
+gem "nokogiri", '>= 1.11.7'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -56,9 +57,8 @@ group :development, :test do
   # Use sqlite3 as the database for Active Record
 end
 group :production do 
-  #gem 'pg', '~>1.3.3'
-  #gem 'rails_12factor'
-
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
   
@@ -66,7 +66,6 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-gem "sqlite3", "~> 1.4"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
