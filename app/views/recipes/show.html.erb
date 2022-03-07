@@ -2,18 +2,19 @@
   <% if @recipe.image? %>
 
   <div class= "show-hero">
-  <%= image_tag @recipe.image.url, class: "recipe-show" %>
+        <%= image_tag @recipe.image.url, class: "recipe-show" %>
+
     <div class= "show-hero-overlay">
       <%= render @recipe %> 
     </div> <!---show-hero-overlay--->
   </div> <!---show--hero--->
   <% end %>
 
-<div class="container">
+<div class="container pt-5 pb-5">
      
              
 
-
+<div class="show-body">
 <h3>Ingredients</h3>
 <ul>
   <% for @ingredient in @recipe.ingredients %>
@@ -27,6 +28,7 @@
     <li><%= @step.direction %></li>
   <% end %>
 </ol> <!---This is for Steps display--->
+</div> <!--show body--->
 
   <div>
     <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |

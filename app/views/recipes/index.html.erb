@@ -1,9 +1,8 @@
-<p style="color: green"><%= notice %></p>
-
-
-<div id="recipes" class="container">
-  <h1>Recipes</h1>
-
+<div class="bgindex">
+  <div id="recipes" class="container">
+  <div class="recipeheader">
+   <center  > <h1>My Favorite Recipes</h1></center>
+  </div> <!---for the header--->
   <%= link_to "New Recipe", new_recipe_path, :class => "btn btn-primary"%>  <!-- btn & btn-primary are two different style class . => is a hash rocket-->
 
   <div class="row pt-5"> <!--pt-5 is adding a padding of 5 which is 3 rems of padding from the row// 1 is less padding 5 is most-->
@@ -21,4 +20,4 @@
   <% end %>
 </div><!-- row-->
 </div>
-
+</div>
